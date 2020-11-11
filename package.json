@@ -1,0 +1,52 @@
+{
+  "name": "pdf-thumbnails-generator",
+  "version": "1.0.0",
+  "description": "Library to generate thumbnails from given pdf<",
+  "main": "build/bundle.js",
+  "scripts": {
+    "build": "webpack",
+    "test": "jest",
+    "prepare": "npm run build",
+    "trypublish": "npm publish || true"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lexnim/pdf-thumbnails-generator"
+  },
+  "author": "Nimesh Sherpa <sherpanimesh@gmail.com> (https://github.com/lexnim)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lexnim/pdf-thumbnails-generator/issues"
+  },
+  "homepage": "https://github.com/lexnim/pdf-thumbnails-generator",
+  "keywords": [
+    "pdfjs",
+    "es6",
+    "pdfthumbnails"
+  ],
+  "devDependencies": {
+    "@babel/cli": "^7.12.1",
+    "@babel/core": "^7.12.3",
+    "@babel/plugin-proposal-class-properties": "^7.12.1",
+    "@babel/polyfill": "^7.12.1",
+    "@babel/preset-env": "^7.12.1",
+    "@bundled-es-modules/pdfjs-dist": "^2.2.228-alpha1",
+    "babel-eslint": "^10.1.0",
+    "babel-loader": "^8.1.0",
+    "babel-preset-minify": "^0.5.0",
+    "eslint": "^7.13.0",
+    "jest": "^26.6.0",
+    "prettier": "^2.1.2",
+    "prettier-webpack-plugin": "^1.2.0",
+    "terser-webpack-plugin": "^5.0.3",
+    "webpack": "^5.4.0",
+    "webpack-cli": "^4.2.0",
+    "worker-loader": "^3.0.5"
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/scripts/testMock.js",
+      "\\.(css|less)$": "<rootDir>/scripts/testMock.js"
+    }
+  }
+}
