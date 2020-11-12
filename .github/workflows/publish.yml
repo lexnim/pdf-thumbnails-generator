@@ -10,7 +10,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      # Setup .npmrc file to publish to npm
       - uses: actions/setup-node@v1
         with:
           node-version: 12
@@ -19,7 +18,7 @@ jobs:
       - run: npm run test -- --coverage --watchAll=false
 
       - name: Setup GIT
-      - run: |
+        run: |
           git reset --hard
           git config --local --list
           git checkout master
@@ -29,7 +28,7 @@ jobs:
             GH_EMAIL: ${{secrets.GH_EMAIL}}
           
       - name: Bump version
-      - run: |
+        run: |
           git reset --hard
           npm version patch
           npm run build
@@ -40,6 +39,6 @@ jobs:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
           
       - name: npm publish
-      - run: npm publish
+        run: npm publish
         env:
             NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
