@@ -4,13 +4,36 @@
 - es6 module
 - generates individual page thumbnails for provided pdf file
 - base64 image
+- returns a promise based function
 
 # 📦 Getting Started
 
-```
+``` text
 npm install pdf-thumbnails-generator
+```
 
+# 🚦 Arguments
+
+| Option                    | Type    | Description                                                                |
+|:-------------------------:|:-------:|:--------------------------------------------------------------------------:|
+| `pdf_source`              | String  | PDF file source                                                            |
+| `thumbnail_size`          | Integer | Desired width of pdf thumbnail eg:- 150                                    |
+
+# 📦 Usage
+
+``` text
 import generatePdfThumbnails from 'pdf-thumbnails-generator';
 
-const thumbnailsResult = await generatePdfThumbnails(pdf_source, thumbnail_size);
+async function generateThumbnails() {
+    try {
+        const thumbnailsResult = await generatePdfThumbnails(pdf_source, thumbnail_size);
+        setThumbnails(thumbnailsResult);
+    } catch (err) {
+        console.error(err);
+    }
+}
 ```
+
+# 🚀 Example
+
+[Click Here](https://lexnim.github.io/pdf-thumbnails-generator/)

@@ -7,14 +7,14 @@ const ImageComp = ({ src, index }) => (<div style={{ margin: '1rem', display: 'i
   <p>Page Index: {index}</p>
 </div>);
 
-const GeneratePdfThumbnailsView = () =>  {
+const App = () =>  {
   const [thumbnails, setThumbnails] = useState(null);
 
   useEffect(() => {
     async function generateThumbnails() {
       try {
         
-        const thumbnailsResult = await generatePdfThumbnails('/sample.pdf', 150);
+        const thumbnailsResult = await generatePdfThumbnails('./sample.pdf', 150);
         setThumbnails(thumbnailsResult);
       } catch (err) {
         console.error(err);
@@ -25,13 +25,13 @@ const GeneratePdfThumbnailsView = () =>  {
 
   return (
     <section>
-      <a target="_blank" rel="noreferrer" href="https://github.com/lexnim/pdf-thumbnails-generator">pdf-thumbnails-generator</a>
+      <a target="_blank" rel="noreferrer" href="https://www.npmjs.com/package/pdf-thumbnails-generator">pdf-thumbnails-generator</a>
       <p>Library to generate thumbnails from given pdf</p>
         {
-          thumbnails && thumbnails.map(({ thumbnail, page }) => <ImageComp key={page} src={thumbnail} index={page} />)
+          thumbnails ? thumbnails.map(({ thumbnail, page }) => <ImageComp key={page} src={thumbnail} index={page} />) : <span>Loading</span>
         }
     </section>
   );
 };
 
-export default GeneratePdfThumbnailsView;
+export default App;
