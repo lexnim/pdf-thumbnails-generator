@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/static/css/main.6dea0f05.chunk.css",
-    "main.js": "/static/js/main.dedcc7d7.chunk.js",
-    "main.js.map": "/static/js/main.dedcc7d7.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.4c65daf4.js",
-    "runtime-main.js.map": "/static/js/runtime-main.4c65daf4.js.map",
-    "static/js/2.1c562245.chunk.js": "/static/js/2.1c562245.chunk.js",
-    "static/js/2.1c562245.chunk.js.map": "/static/js/2.1c562245.chunk.js.map",
-    "index.html": "/index.html",
-    "static/css/main.6dea0f05.chunk.css.map": "/static/css/main.6dea0f05.chunk.css.map",
-    "static/js/2.1c562245.chunk.js.LICENSE.txt": "/static/js/2.1c562245.chunk.js.LICENSE.txt"
+    "main.css": "/pdf-thumbnails-generator/static/css/main.6dea0f05.chunk.css",
+    "main.js": "/pdf-thumbnails-generator/static/js/main.dedcc7d7.chunk.js",
+    "main.js.map": "/pdf-thumbnails-generator/static/js/main.dedcc7d7.chunk.js.map",
+    "runtime-main.js": "/pdf-thumbnails-generator/static/js/runtime-main.70f2b4ac.js",
+    "runtime-main.js.map": "/pdf-thumbnails-generator/static/js/runtime-main.70f2b4ac.js.map",
+    "static/js/2.1c562245.chunk.js": "/pdf-thumbnails-generator/static/js/2.1c562245.chunk.js",
+    "static/js/2.1c562245.chunk.js.map": "/pdf-thumbnails-generator/static/js/2.1c562245.chunk.js.map",
+    "index.html": "/pdf-thumbnails-generator/index.html",
+    "static/css/main.6dea0f05.chunk.css.map": "/pdf-thumbnails-generator/static/css/main.6dea0f05.chunk.css.map",
+    "static/js/2.1c562245.chunk.js.LICENSE.txt": "/pdf-thumbnails-generator/static/js/2.1c562245.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.4c65daf4.js",
+    "static/js/runtime-main.70f2b4ac.js",
     "static/js/2.1c562245.chunk.js",
     "static/css/main.6dea0f05.chunk.css",
     "static/js/main.dedcc7d7.chunk.js"
