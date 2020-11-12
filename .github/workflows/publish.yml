@@ -15,6 +15,27 @@ jobs:
           node-version: 12
       - run: npm install
       - run: npm run test -- --coverage --watchAll=false
+
+      - name: Setup GIT
+        run: |
+          git reset --hard
+          git config --local --list
+          git checkout master
+          git config user.email "$GH_EMAIL"
+          git config user.name "lexnim"
+        env:
+            GH_EMAIL: ${{secrets.GH_EMAIL}}
+          
+      - name: Bump version
+        run: |
+          git reset --hard
+          npm version patch
+          npm run build
+          git add . || true
+          git commit -m "Build update" || true
+          git push "https://$GITHUB_ACTOR:$GITHUB_TOKEN@github.com/$GITHUB_REPOSITORY"
+        env:
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
           
       - name: npm publish
         run: |
