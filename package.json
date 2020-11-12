@@ -1,6 +1,6 @@
 {
   "name": "pdf-thumbnails-generator",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Library to generate thumbnails from given pdf",
   "main": "build/bundle.js",
   "scripts": {
