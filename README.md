@@ -26,8 +26,8 @@ import generatePdfThumbnails from 'pdf-thumbnails-generator';
 
 async function generateThumbnails() {
     try {
-        const thumbnailsResult = await generatePdfThumbnails(pdf_source, thumbnail_size);
-        setThumbnails(thumbnailsResult);
+        const thumbnails = await generatePdfThumbnails(pdf_source, thumbnail_size);
+        console.log(thumbnails);
     } catch (err) {
         console.error(err);
     }
