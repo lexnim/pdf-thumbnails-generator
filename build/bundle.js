@@ -1,6 +1,6 @@
 /*!
  * 
- *   pdf-thumbnails-generator v1.0.4
+ *   pdf-thumbnails-generator v1.0.5
  *   https://github.com/lexnim/pdf-thumbnails-generator
  *
  *   Copyright (c) Nimesh Sherpa (https://github.com/lexnim)
